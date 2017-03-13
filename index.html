@@ -1,0 +1,36 @@
+<html>
+<head>
+<meta charset="utf-8">
+<script src="js/dictionary_data.js"></script>
+<script src="js/string_splitting.js"></script>
+<script src="js/hiroka.js"></script>
+<script src="js/indexeddb_raw_muckabout.js"></script>
+</head>
+<body>
+
+<div style="float:left; width:33%;">
+
+<h1>IndexedDB contents</h1>
+<button type="button" id="idb-contents-button" onclick="doRefresh();">refresh</button>
+<div id="idb-contents">
+</div>
+</div>
+
+<div style="float:left; width:33%;">
+<h1>IndexedDB search</h1>
+<input type="text" id="idb-search-term">
+<button type="button" id="idb-search-button" onclick="doSearchKanji();">search if kanji</button>
+<button type="button" id="idb-search-button" onclick="doSearchKana();">search if kana</button>
+<button type="button" onclick="doGetChars();">test get chars</button>
+<button type="button" onclick="doGetWords();">test get words</button>
+<button type="button" onclick="doIsSentence();">test string is sentence</button>
+
+<div id="idb-search">
+</div>
+</div>
+
+<div style="float:left; width:33%;">
+</div>
+
+</body>
+</html>
