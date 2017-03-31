@@ -1,3 +1,23 @@
+ //FYI this is how Japxlate searches:
+ /*
+ * There are two search routes based on if the search term is in Japanese
+ * or English.
+ * If English then we try the following match priorities (stopping
+ * when we get at least one match):
+ * [1] term matches an edict definition fragment EXACTLY
+ * [2] term is included in an edict definition fragment
+ * [3] term assumed to be romaji, converted to hiragana, matches exactly an
+ *     edict "kana" field entry
+ * If Japanese then:
+ * [1] term matches an edict "kanji" field entry EXACTLY
+ * [2] term matches an edict "kana" field entry EXACTLY
+ */
+
+//string could be one or more words
+function getInputType(string)
+{
+	return 'kanji';	//FTTB (might not need such drastic input detection)
+}
 
 function getCharsInWord(word)
 {
